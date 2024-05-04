@@ -1,15 +1,16 @@
 
-import Navigation from './web-navigation/Navigation.jsx'
-import './App.css'
+import Navigation from './web-navigation/Navigation.jsx';
+import HeaderAnimate from './web-header-animate/HeaderAnimate.jsx'
+import './App.css';
 
 function App() {
 
   return (
       <>
-        hello App!
         <Navigation/>
+        <HeaderAnimate/>
       </>
-  )
+  );
 }
 
-export default App
+export default App;

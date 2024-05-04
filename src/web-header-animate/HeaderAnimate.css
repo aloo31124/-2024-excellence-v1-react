@@ -1,0 +1,119 @@
+
+/* 網頁標頭 過場動畫 start */
+.header-animation {
+    height: 200vh;
+}
+
+.header-animation .head-right-little-img {
+    position: absolute;
+    top: 8vh;
+    right: 15vw;
+}
+
+.header-animation .head-left-img {
+    position: absolute;
+    top: 55vh;
+    left: 7vw;
+}
+
+.header-animation .head-right-img {
+    position: absolute;
+    top: 115vh;
+    right: 12vw;
+}
+
+.header-animation .header-animation-text-content {
+    position: fixed;
+    bottom: 25vh;
+    overflow: hidden;
+}
+
+.icon-double-down-arr {
+    position: fixed;
+    left: 50%;
+    bottom: 10%;
+    transition: 2s;
+    cursor: pointer; /* 滑鼠游標 */
+    z-index: var(--z-index-top1-nav);
+}
+
+.header-animation .move-from-right {
+    position: relative;
+}
+
+.header-animation .center-title {
+    padding: 40px 0;
+}
+
+.header-animation .center-title .slogan-little {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* 網頁標頭 移動標頭 效果 */
+.move-slogn-container {
+    width: 100vw;
+    height: 16vh;
+    position: relative;
+    font-size: 125px;
+    font-family: "DFPZongYiW9-B5";
+    font-weight: 400;
+    -webkit-text-stroke: 1px var(--primary-black); /* 邊框 */
+    color: var(--primary-white);
+    opacity: 0.7;
+    overflow: hidden;
+}
+.move-slogn-container .move-slogn-right {
+    position: absolute;
+    white-space:nowrap;
+    right: 0;
+    animation: move-slogn-right 2s linear;
+}
+.move-slogn-container .move-slogn-left {
+    position: absolute;
+    white-space:nowrap;
+    left: 0;
+    animation: move-slogn-left 2s linear;
+}
+
+@keyframes move-slogn-right {
+    50% {
+        right: 30px;
+    }
+    100% {
+        right: 0px;
+    }
+}
+@keyframes move-slogn-left {
+    50% {
+        left: 30px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+/* 網頁標頭 過場動畫 end */
+
+
+/* 通用 RWD */
+@media (max-width: 1500px) {
+    /* 網頁標頭 過場動畫 start */
+    .header-animation .move-slogn-container {
+        font-size: 90px;        
+    }
+    .header-animation h1 {
+        font-size: 95px;       
+    }
+    /* 網頁標頭 過場動畫 end */
+}
+@media (max-width: 800px) {
+    /* 網頁標頭 過場動畫 start */
+    .header-animation .move-slogn-container {
+        font-size: 75px;        
+    }
+    .header-animation h1 {
+        font-size: 60px;       
+    }
+    /* 網頁標頭 過場動畫 end */
+}
+  

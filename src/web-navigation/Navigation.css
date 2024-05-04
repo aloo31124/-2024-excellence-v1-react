@@ -9,7 +9,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
+    position: fixed;
+    z-index: var(--z-index-top1-nav);
     /* align-items: center;  */ /* 造成 藍色底線無法位移*/
   }
   
