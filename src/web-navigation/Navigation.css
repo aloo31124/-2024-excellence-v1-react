@@ -1,30 +1,24 @@
 
 
 /* 上方導覽列 start */
-.nav-container {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0.5% auto;
-    position: fixed;
-    z-index: var(--z-index-top1-nav);
-}
 
   
-  .text-bounce-bottom-container {
+  .nav-container {
+    width: 600px;
+    min-width: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
     /* align-items: center;  */ /* 造成 藍色底線無法位移*/
   }
   
   .text-bounce-bottom-box {
     height: 5px;
     width: 7%;
-    position: relative;
-    top: -15%;
-    left: 20%;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
   
     display: flex;
     flex-direction: column;
@@ -39,7 +33,6 @@
   }
   
  .nav-centent {
-    min-width: 100px;
     display: flex;
     flex-direction: row;
     justify-content: center;

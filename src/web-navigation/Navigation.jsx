@@ -4,9 +4,8 @@ import './Navigation.css'
 function Navigation() {
     
     return (
-        <nav className="nav-container">
 
-            <div className="text-bounce-bottom-container">
+            <div className="nav-container">
                 <div className="nav-centent">
                     <div className="item-list">
                         <a className="item" id="nav-item1" href="#price-work-flow">
@@ -32,7 +31,6 @@ function Navigation() {
                     <div className="text-bounce-bottom"></div>
                 </div>
             </div>
-        </nav>
     );
 }
 
