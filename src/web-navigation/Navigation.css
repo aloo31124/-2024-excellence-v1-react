@@ -1,0 +1,90 @@
+
+
+/* 上方導覽列 start */
+.nav-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0.5% auto;
+    position: fixed;
+    z-index: var(--z-index-top1-nav);
+}
+
+  
+  .text-bounce-bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center;  */ /* 造成 藍色底線無法位移*/
+  }
+  
+  .text-bounce-bottom-box {
+    height: 5px;
+    width: 7%;
+    position: relative;
+    top: -15%;
+    left: 20%;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+ .text-bounce-bottom-box .text-bounce-bottom {
+    height: 5px;
+    width: 100%;
+    border-radius: 2.5px;
+    background: var(--primary-blue);
+  }
+  
+ .nav-centent {
+    min-width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+    background: var(--primary-white);
+  
+    padding: 0 5px;
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: 1px 5px 10px var(--light-gray);
+  }
+  
+ .nav-centent .logo img {
+    width: 40px;
+    padding: 0 0 0 20px;
+  }
+  
+ .nav-centent .item-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  
+ .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    cursor: pointer;
+    white-space:nowrap;
+    transition: 1s;
+  }
+
+  .item label {
+    color: var(--primary-black);
+  }
+  
+  
+ .item img {
+    padding: 0 5px;
+    max-width: 25px;
+  }
+  /* 上方導覽列 end */
+
