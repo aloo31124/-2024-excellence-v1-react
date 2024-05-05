@@ -1,0 +1,259 @@
+/* 報價流程 start */
+
+.price-work-flow {
+    position: relative;
+    background: var(--light-orange);
+}
+
+.price-work-flow .price-work-flow-title {
+    margin-top: 1%;
+
+    font-size: 64px;
+    font-family: "DFPZongYiW9-B5";
+    font-weight: 400;
+    -webkit-text-stroke: 1px var(--light-gray); /* 邊框 */
+    color: var(--primary-white);
+    opacity: 1;
+}
+
+.price-work-flow .left-little-img {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+    width: 100px;
+    z-index: var(--z-index-top4-background);
+}
+
+.price-work-flow .right-img {
+    position: absolute;
+    top: 10vh;
+    right: 5vw;
+    width: 500px;
+    z-index: var(--z-index-top4-background);
+}
+
+.price-work-flow p {
+    max-width: 80vw;
+
+    color: var(--gray);
+    line-height: 25px;
+    font-size: 20px;    
+    padding: 2px 0;
+    margin-top: 2%; /* 上方距離 */
+}
+/* 報價流程 end */
+
+
+/* 報價流程-輪播圖 start */
+.price-work-flow-slide {
+    max-width: 80vw;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flow-tab-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 350px;
+    padding: 5px 0;
+
+    z-index: var(--z-index-top2-click);
+    position: relative;
+}
+
+.flow-tab-list .tab {
+    font-size: 45px;
+    color: var(--gray);
+}
+
+.flow-slide-list {
+    position: relative;
+    width: 800px;
+    height: 300px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+}
+
+.price-work-flow-bounce-bottom-box {
+    height: 5px;
+    width: 7%;
+    position: relative;
+    bottom: -1%;
+    left: 4%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-work-flow-bounce-bottom {
+    height: 5px;
+    width: 100%;
+    border-radius: 2.5px;
+    background: var(--primary-blue);
+}
+
+.slide h3 {
+    font-size: 64px;
+
+    font-family: "DFPZongYiW9-B5";
+    font-weight: 400;
+    -webkit-text-stroke: 1px var(--primary-black); /* 邊框 */
+    color: var(--primary-white);
+    opacity: 0.5;
+
+    margin-top: 0;
+}
+
+.slide {
+    margin: 0;
+    padding: 0;
+    width: inherit;
+    height: inherit;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* 字體調整 */
+    font-family: Helvetica;
+    font-size: 120px;
+    color: var(--primary-white);
+    z-index: var(--z-index-top2-click);
+
+    /* 圖片輪播移動效果 */
+    transition: .5s transform ease-in-out;
+}
+
+.slide:nth-of-type(1) {
+    left: 0;
+}
+
+.slide:nth-of-type(2) {
+    left: 100%;
+}
+
+.slide:nth-of-type(3) {
+    left: 200%;
+}
+
+.slide:nth-of-type(4) {
+    left: 300%;
+}
+
+input[type="radio"] {
+    position: relative;
+    display: none;
+}
+
+.flow-button-icon-list {
+    position: absolute;
+    width: 100%;
+    bottom: 12px;
+    text-align: center;
+    z-index: var(--z-index-top2-click);
+}
+
+.flow-button-icon-list label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-orange);
+    border-radius: 5px;
+
+    transition: 0.25s;
+}
+
+.flow-button-icon-list label:nth-of-type(1) {
+    width: 20px;
+}
+
+
+/* 服務項目列表 start */
+.service-list {
+    position: relative; /* 讓背景圖 定位 */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-list .service-list-title {
+    margin-top: 5%;
+    font-size: 64px;
+    font-family: "DFPZongYiW9-B5";
+    font-weight: 400;
+    -webkit-text-stroke: 1px var(--light-gray); /* 邊框 */
+    color: var(--primary-white);
+    opacity: 1;
+}
+
+.service-list .left-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    z-index: var(--z-index-top3-defalut); /* 避免被下方三角形遮到 */
+}
+
+.service-list .left-block .left-img {
+    position: absolute;
+    top: 10vh;
+    left: 15vw;
+}
+
+.service-list .left-block .item h3 {
+    color: var(--primary-black);
+    opacity: 0.6;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.service-list .left-block .item p {
+    color: var(--primary-black);
+    opacity: 0.2;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 30px;
+    padding: 20px 0;
+}
+
+.service-list .right-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: left;
+    width: 20%;
+    height: 50%;
+}
+
+.service-list .right-block h2 {
+    margin-bottom: 40%;
+}
+
+.service-list .right-block .right-logo {
+    position: absolute;
+    top: 40vh;
+    right: 20vw;
+    width: 200px;
+    z-index: var(--z-index-top4-background);
+}
+/* 服務項目列表 end */
+
+

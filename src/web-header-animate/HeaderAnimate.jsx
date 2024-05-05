@@ -1,11 +1,19 @@
 
-import './HeaderAnimate.css'
+import './HeaderAnimate.css';
+import bgLeftLittleStar from '../assets/background/bg-left-little-star.png';
+import bgRightStar from '../assets/background/bg-right-star.png';
+import bgLeftBigBlock from '../assets/background/bg-left-big-block.png';
 
 function HeaderAnimate() {
 
     return(
         
         <section className="header-animation">
+
+            <img className="head-right-little-img" src={bgLeftLittleStar}/>
+            <img className="head-left-img" src={bgRightStar}/>
+            <img className="head-right-img" src={bgLeftBigBlock}/>
+
             <div className="header-animation-text-content">
                 <div className="move-slogn-container">
                     <div className="move-slogn-right">教育旅行咖啡花店</div>
@@ -24,5 +32,5 @@ function HeaderAnimate() {
 
 }
 
-export default HeaderAnimate
+export default HeaderAnimate;
 

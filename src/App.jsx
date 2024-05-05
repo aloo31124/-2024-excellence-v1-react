@@ -1,6 +1,7 @@
 
 import Navigation from './web-navigation/Navigation.jsx';
-import HeaderAnimate from './web-header-animate/HeaderAnimate.jsx'
+import HeaderAnimate from './web-header-animate/HeaderAnimate.jsx';
+import WorkFlowSlide from './work-flow-slide/WorkFlowSlide.jsx';
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <>
         <Navigation/>
         <HeaderAnimate/>
+        <WorkFlowSlide/>
       </>
   );
 }
