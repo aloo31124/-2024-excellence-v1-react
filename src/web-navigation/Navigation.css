@@ -3,8 +3,8 @@
 /* 上方導覽列 start */
 
   
-  .nav-container {
-    width: 600px;
+.nav-container {
+    width: 680px;
     min-width: 100px;
     display: flex;
     flex-direction: column;
@@ -12,28 +12,51 @@
     position: fixed;
     z-index: var(--z-index-top1-nav);
     /* align-items: center;  */ /* 造成 藍色底線無法位移*/
-  }
+}
   
-  .text-bounce-bottom-box {
+.text-bounce-bottom-box {
     height: 5px;
     width: 7%;
     position: absolute;
     bottom: 10%;
-    left: 25%;
+    left: 21%;
   
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+
+    animation: bounce-move 0.5s linear;
+}
+
+@keyframes bounce-move {
+    20% {
+        transform: translateX(160px);
+    }
+    40% {
+      transform: translateX(-160px);
+    }
+    60% {
+        transform: translateX(80px);
+    }
+    80% {
+      transform: translateX(-80px);
+    }
+    90% {
+        transform: translateX(40px);
+    }
+    100% {
+      transform: translateX(-40px);
+    }
+}
   
- .text-bounce-bottom-box .text-bounce-bottom {
+.text-bounce-bottom-box .text-bounce-bottom {
     height: 5px;
     width: 100%;
     border-radius: 2.5px;
     background: var(--primary-blue);
-  }
+}
   
- .nav-centent {
+.nav-centent {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -45,40 +68,78 @@
     height: 60px;
     border-radius: 30px;
     box-shadow: 1px 5px 10px var(--light-gray);
+
+    transition: 0.25s;
   }
   
- .nav-centent .logo img {
+.nav-centent .logo img {
     width: 40px;
     padding: 0 0 0 20px;
-  }
+}
   
- .nav-centent .item-list {
+.nav-centent .item-list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 10px;
-  }
+}
   
   
- .item {
+.item {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px 10px;
     cursor: pointer;
     white-space:nowrap;
-    transition: 1s;
-  }
+}
 
-  .item label {
+.item label {
     color: var(--primary-black);
-  }
+    cursor: pointer;
+}
   
   
- .item img {
+.item img {
     padding: 0 5px;
     max-width: 25px;
-  }
-  /* 上方導覽列 end */
+    cursor: pointer;
+}
+
+
+/* 導覽列 開關 */
+.fa-close {
+  margin-left: 10px;
+}
+
+.item-bar {
+  font-size: 30px;
+  color: var(--primary-blue);
+  display: none;
+}
+
+.item-bar.closed {
+  display: block;
+  cursor: pointer;
+}
+
+.nav-centent.closed {
+  width: 50px;
+  transform: translateX(60vw);
+  right: 1%;
+}
+
+.item-list.closed {
+  display: none; 
+}
+
+.logo.closed {
+  display: none; 
+}
+
+.text-bounce-bottom-box.closed {
+  display: none;
+}
+/* 上方導覽列 end */
 
