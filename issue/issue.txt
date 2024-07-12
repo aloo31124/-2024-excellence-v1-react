@@ -1,5 +1,22 @@
 啟動語法: npm run dev
 
+
+
+========================================================================
+07/12
+
+如下 WorkFlowSlide.jsx 與 WorkFlowSlide.css 在同個目錄,
+但 WorkFlowSlide.css 設定會對其他 [函式組件] 影響, 
+如何讓該 WorkFlowSlide.css 作用域只影像 WorkFlowSlide.jsx ? 此方法稱呼為何?
+
+WorkFlowSlide.jsx 函式組件 : 
+    import './WorkFlowSlide.css'; // 引入 css
+    function WorkFlowSlide() { ... return(...) } // 函式組件
+
+方法: 使用 css模塊化
+
+
+
 ========================================================================
 07/12
 
