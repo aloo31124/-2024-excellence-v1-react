@@ -1,0 +1,32 @@
+
+啟動語法: npm run dev
+
+
+====================================================================
+07/12 
+js 的寫法, 模板字面量（Template Literals），允许在字符串中嵌入表达式。
+    - 模板字面量：由反引号（`）包围，允许在字符串中嵌入表达式。
+    - 嵌入表达式：用 ${} 语法将 JavaScript 表达式嵌入到字符串中。
+    - 条件运算符：isOpen ? '' : 'closed' 是条件（三元）运算符，根据 isOpen 的值决定返回哪个字符串。
+
+格式
+ `原字串 ${ js變數 或 字面量 }  `
+
+
+範例:
+    className={`nav-centent ${isOpen ? '' : 'closed'}`}
+    .nav-centent {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        ...
+    }
+
+    .nav-centent.closed {
+        width: 50px;
+        transform: translateX(60vw);
+        right: 1%;
+    }
+
+====================================================================

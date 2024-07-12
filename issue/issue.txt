@@ -1,31 +1,56 @@
+啟動語法: npm run dev
 
 
+========================================================================
+05/05
 
-====================================================================
-07/12 
-js 的寫法, 模板字面量（Template Literals），允许在字符串中嵌入表达式。
-    - 模板字面量：由反引号（`）包围，允许在字符串中嵌入表达式。
-    - 嵌入表达式：用 ${} 语法将 JavaScript 表达式嵌入到字符串中。
-    - 条件运算符：isOpen ? '' : 'closed' 是条件（三元）运算符，根据 isOpen 的值决定返回哪个字符串。
+[議題]:
+如下 react 程式.jsx, 點選 nav-close, 改變 nav-centent 寬度, 並且讓 item-list 改成 display: none,
+function Navigation() {
+    return (
+            <div className="nav-container">
+                <div className="nav-centent">
+                    <div className="item-list">
+                        <a className="item" id="nav-item1" href="#price-work-flow">
+                            <img src={iconHandShake} /><label>合作流程</label>
+                        </a>
+                        ...
+                        <div className="item fa fa-close" id="nav-close"></div>
+                    </div>
+                </div>
+                <div className="text-bounce-bottom-box">
+                    <div className="text-bounce-bottom"></div>
+                </div>
+            </div>
+    ); } export default Navigation
 
-格式
- `原字串 ${ js變數 或 字面量 }  `
 
+[解法1] :
+使用 react 狀態state管理 + css類名切換:
 
-範例:
-    className={`nav-centent ${isOpen ? '' : 'closed'}`}
-    .nav-centent {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        ...
-    }
+import React, { useState } from 'react';
+...
+    const [isOpen, setIsOpen] = useState(true); // 初始狀態為展開
+    const toggleNav = () => {
+      setIsOpen(!isOpen);
+    };
 
+切換開關:
+  <div ... onClick={toggleNav}></div>
+
+改變屬性:
+    <div className={`nav-centent ${isOpen ? '' : 'closed'}`}>
+
+css類名切換:
     .nav-centent.closed {
-    width: 50px;
-    transform: translateX(60vw);
-    right: 1%;
+        width: 50px; 
+        right: 1%;
     }
+    .item-list.closed {
+        display: none; 
+    }
+
+
+========================================================================
 
 
