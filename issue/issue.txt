@@ -2,6 +2,20 @@
 
 
 ========================================================================
+07/12
+
+如下react函式組件, moveSlide()執行後, 如何讓 flowSlideList元素 left 改為 -500px?
+    function WorkFlowSlide() { ...
+        const flowSlideList = useRef();     
+        const moveSlide = (index) => { 
+            console.log(flowSlideList.current.style , index);
+        }
+        return (...  <div onClick={() => moveSlide()}></div> ) 
+    }
+寫法:
+    flowSlideList.current.style.left = '-500px';
+
+========================================================================
 05/05
 
 [議題]:

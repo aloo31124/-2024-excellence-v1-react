@@ -1,5 +1,6 @@
 /* 報價流程 start */
 
+
 .price-work-flow {
     position: relative;
     background: var(--light-orange);
@@ -68,10 +69,14 @@
 
 .flow-tab-list .tab {
     font-size: 45px;
-    color: var(--gray);
+    color: var(--light-gray);
 }
 
-.flow-slide-list {
+.flow-tab-list .tab:first-child {
+    color: var(--primary-orange);
+}
+
+.flow-slide-list-rail {
     position: relative;
     width: 800px;
     height: 300px;
@@ -81,26 +86,17 @@
     padding: 0;
 
     overflow: hidden;
-
 }
 
-.price-work-flow-bounce-bottom-box {
-    height: 5px;
-    width: 7%;
-    position: relative;
-    bottom: -1%;
-    left: 4%;
-
+.flow-slide-list {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    flex-direction: row;    
 
-.price-work-flow-bounce-bottom {
-    height: 5px;
-    width: 100%;
-    border-radius: 2.5px;
-    background: var(--primary-blue);
+    /* 圖片輪播移動效果 */
+    transition: .5s transform ease-in-out;
 }
 
 .slide h3 {
@@ -118,13 +114,9 @@
 .slide {
     margin: 0;
     padding: 0;
-    width: inherit;
-    height: inherit;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
+    width: 800px;
+    height: 300px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,25 +127,6 @@
     font-size: 120px;
     color: var(--primary-white);
     z-index: var(--z-index-top2-click);
-
-    /* 圖片輪播移動效果 */
-    transition: .5s transform ease-in-out;
-}
-
-.slide:nth-of-type(1) {
-    left: 0;
-}
-
-.slide:nth-of-type(2) {
-    left: 100%;
-}
-
-.slide:nth-of-type(3) {
-    left: 200%;
-}
-
-.slide:nth-of-type(4) {
-    left: 300%;
 }
 
 input[type="radio"] {
@@ -175,7 +148,7 @@ input[type="radio"] {
     height: 10px;
     background-color: var(--primary-orange);
     border-radius: 5px;
-
+    margin: 0 2px;
     transition: 0.25s;
 }
 
