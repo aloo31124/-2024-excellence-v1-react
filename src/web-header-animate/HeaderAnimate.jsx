@@ -16,14 +16,14 @@ function HeaderAnimate() {
 
             <div className="header-animation-text-content">
                 <div className="move-slogn-container">
-                    <div className="move-slogn-right">教育旅行咖啡花店</div>
+                    <div className="move-slogn-right">企業網站。形象網站</div>
                 </div>
                 <div className="center-title">
-                    <h1 className="">艾陞倫 We're Excellence!</h1>
-                    <p className="slogan-little">我們熱愛學習溝通, 您值得信賴的合作夥版</p>
+                    <h1 className="">網頁設計。官方網站</h1>
+                    <p className="slogan-little">專業網頁設計，塑造您的獨特品牌形象，讓您在網絡世界中脫穎而出</p>
                 </div>
                 <div className="move-slogn-container">
-                    <div className="move-slogn-left">設計SSL安全憑證</div>
+                    <div className="move-slogn-left">UI/UX。RWD。SEO</div>
                 </div>            
             </div>
         </section>
