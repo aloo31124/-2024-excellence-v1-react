@@ -8,15 +8,49 @@ import { useRef } from 'react';
 function WorkFlowSlide() {
 
     // 輪播圖 所有圖片列表
-    const flowSlideList = useRef();
+    const flowSlideListDom = useRef();
+    // 上方切換tab圖列
+    const flowTabListDom = useRef();
+    // 下方切換tab按鈕列
+    const flowButtonIconListDom = useRef();
 
     /* 
      * 位移輪播圖
      */
     const moveSlide = (index) => {
-        flowSlideList.current.style.transition = "0.5s ease-in-out"; // 水平滑動動畫效果
-        flowSlideList.current.style.left = (index * -800) + 'px';
+        flowSlideListDom.current.style.transition = "0.5s ease-in-out"; // 水平滑動動畫效果
+        flowSlideListDom.current.style.left = (index * -800) + 'px';
+        resetTabStyle(index);
     }
+
+    /* 
+     * 初始 輪播圖 切換按鈕樣式
+     */
+    const resetTabStyle = (index) => { 
+        // 上方圖片切換tab
+        const flowTabList = flowTabListDom.current.querySelectorAll('.tab');
+        const tabsArray = Array.from(flowTabList);
+        tabsArray.forEach((tab, _index) => {
+            if(_index === index) {
+                tab.style.color = 'var(--primary-orange)';
+            }
+            else {
+                tab.style.color = 'var(--light-gray)';
+            }            
+        });
+
+        // 下方切換icon 列
+        const flowButtonIconList = flowButtonIconListDom.current.querySelectorAll('label');
+        const iconsArray = Array.from(flowButtonIconList);
+        iconsArray.forEach((icon, _index) => { 
+            if(_index === index) {
+                icon.style.width = '20px';
+            }
+            else {
+                icon.style.width = '10px';
+            }                           
+        });
+     }
 
     return (
         <section className="price-work-flow" id="price-work-flow">
@@ -30,7 +64,7 @@ function WorkFlowSlide() {
             </p>
             <div className="price-work-flow-slide">
                 <div className="flow-tab-list-container">
-                    <div className="flow-tab-list">
+                    <div className="flow-tab-list" ref={flowTabListDom}>
                         <div className="tab fa fa-search" onClick={() => moveSlide(0)}></div>
                         <div className="fa fa-arrow-right"></div>
                         <div className="tab fa fa-code"   onClick={() => moveSlide(1)}></div>
@@ -42,7 +76,7 @@ function WorkFlowSlide() {
                 </div>
                     
                 <div className="flow-slide-list-rail">
-                    <div className="flow-slide-list" ref={flowSlideList}>
+                    <div className="flow-slide-list" ref={flowSlideListDom}>
                         <div className="slide" id="slide1">
                             <h3>01 需求分析</h3>
                             <p> 
@@ -77,11 +111,11 @@ function WorkFlowSlide() {
                         </div>
                     </div>
 
-                    <div className="flow-button-icon-list">
-                        <label id="flowIcon1" onClick={() => moveSlide(0)}></label>
-                        <label id="flowIcon2" onClick={() => moveSlide(1)}></label>
-                        <label id="flowIcon3" onClick={() => moveSlide(2)}></label>
-                        <label id="flowIcon4" onClick={() => moveSlide(3)}></label>
+                    <div className="flow-button-icon-list" ref={flowButtonIconListDom}>
+                        <label onClick={() => moveSlide(0)}></label>
+                        <label onClick={() => moveSlide(1)}></label>
+                        <label onClick={() => moveSlide(2)}></label>
+                        <label onClick={() => moveSlide(3)}></label>
                     </div>
                 </div>
             </div>

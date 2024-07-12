@@ -1,5 +1,41 @@
 啟動語法: npm run dev
 
+========================================================================
+07/12
+
+如下react函式組件, 如何在 resetTabStyle()中 取得 flow-tab-list 下所有 tab, 並存入陣列
+    const resetTabStyle = () => { ... }
+
+    return (
+        <div className="flow-tab-list-container">
+            <div className="flow-tab-list">
+                <div className="tab fa fa-*"></div>
+                <div className="tab fa fa-*"></div>
+                <div className="tab fa fa-*"></div>
+                <div className="tab fa fa-*"></div>
+            </div>
+        </div>
+    )
+
+寫法:
+    <div className="flow-tab-list-container" ref={flowTabListDom}>
+
+    ...
+    const flowTabListDom = useRef();
+    const resetTabStyle = () => {
+        // 上方圖片切換tab
+        const flowTabList = flowTabListDom.current.querySelectorAll('.tab');
+        const tabsArray = Array.from(flowTabList);
+        tabsArray.forEach((tab, _index) => {
+            if(_index === index) {
+                tab.style.color = 'var(--primary-orange)';
+            }
+            else {
+                tab.style.color = 'var(--light-gray)';
+            }            
+        });
+    }
+
 
 ========================================================================
 07/12
