@@ -1,7 +1,7 @@
 
-import Navigation from './navigation/Navigation.jsx';
-import HeaderAnimate from './header-animate/HeaderAnimate.jsx';
-import WorkFlowSlide from './work-flow-slide/WorkFlowSlide.jsx';
+import Navigation from './components/Navigation.jsx';
+import HeaderAnimate from './components/HeaderAnimate.jsx';
+import WorkFlowSlide from './components/WorkFlowSlide.jsx';
 import './App.css';
 
 function App() {
