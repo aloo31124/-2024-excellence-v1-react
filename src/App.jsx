@@ -1,6 +1,6 @@
 
-import Navigation from './web-navigation/Navigation.jsx';
-import HeaderAnimate from './web-header-animate/HeaderAnimate.jsx';
+import Navigation from './navigation/Navigation.jsx';
+import HeaderAnimate from './header-animate/HeaderAnimate.jsx';
 import WorkFlowSlide from './work-flow-slide/WorkFlowSlide.jsx';
 import './App.css';
 
