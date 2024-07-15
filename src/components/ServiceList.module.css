@@ -33,6 +33,17 @@
     left: 15%;
 }
 
+.item {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+  
+.item.fadeIn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .item h3 {
     font-size: 1.75rem;
     color: var(--primary-black);
