@@ -1,7 +1,7 @@
 {
   "name": "2024-web-design-excellent",
-  "private": true,
   "version": "0.0.0",
+  "homepage":"http://127.0.0.1/reacttest",
   "type": "module",
   "scripts": {
     "dev": "vite",
