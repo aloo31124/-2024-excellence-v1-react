@@ -1,6 +1,96 @@
 啟動語法: npm run dev
 
 
+========================================================================
+08/20
+
+問題:
+如下, text-bounce-bottom-box 初始位置在 logo,點選 item 後該 text-bounce-bottom-box 會位移至 item 中央正下方, 
+該如何使用 react 18 最佳化撰寫?
+
+
+小g建議寫法 ref 回調
+
+jsx: 
+    /* 藍色底線位移 */
+    const [boxLeft, setBoxLeft] = useState("21%"); 
+    const logoRef = useRef(null);
+    const itemsRef = useRef([]);
+    const handleItemClick = (index) => {
+        const selectedItem = itemsRef.current[index];
+        console.log(selectedItem.getBoundingClientRect());
+        const itemRect = selectedItem.getBoundingClientRect();
+        const containerRect = logoRef.current.getBoundingClientRect();
+        const newLeft = itemRect.left - containerRect.left + itemRect.width / 2 ;
+        setBoxLeft(newLeft);
+    };
+
+
+                    <a href="#" id="logo" ref={logoRef}  ... >
+                        <img src={logo} />
+                    </a>
+    
+                            <a 
+                                className="item" 
+                                href="#price-work-flow"
+                                ref={el => itemsRef.current[0] = el}
+                                onClick={() => handleItemClick(0)}
+                            >
+                                <img src={iconHandShake} alt="合作流程" />
+                                <label>合作流程</label>
+                            </a>
+                            ......
+
+
+
+原本程式:
+jsx:
+            <div className="nav-container">
+                <div className={`nav-centent ${isOpen ? '' : 'closed'}`}>
+                    <a href="#" id="logo" className={`logo ${isOpen ? '' : 'closed'}`}>
+                        <img src={logo} />
+                    </a>
+                    <div className={`item-list ${isOpen ? '' : 'closed'}`}>
+                        <a className="item" href="#price-work-flow">
+                            <img src={iconHandShake} />
+                            <label>合作流程</label>
+                        </a>
+                        <a className="item" href="#service-list">
+                            <img src={iconMenu} />
+                            <label>服務項目</label>
+                        </a>
+                        <a className="item" href="#portfolio-block">
+                            &nbsp;
+                            <img src={icon2Img} />
+                            <label>作品集</label>
+                            &nbsp;
+                        </a>
+                        <a className="item" href="#footer">
+                            <img src={iconPhone} />
+                            <label>聯絡我們</label>
+                        </a>
+                        <div className="item fa fa-close" onClick={toggleNav}></div>
+                    </div>
+                    <div className={`item-bar ${isOpen ? '' : 'closed'}`} >
+                        <div className="fa fa-bars" onClick={toggleNav}></div>
+                    </div>
+                </div>
+                <div className={`text-bounce-bottom-box ${isOpen ? '' : 'closed'}`}>
+                    <div className="text-bounce-bottom"></div>
+                </div>
+            </div>
+
+css: 
+.text-bounce-bottom-box {
+    height: 5px;
+    width: 7%;
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: bounce-move 0.5s linear;
+}
 
 ========================================================================
 07/15

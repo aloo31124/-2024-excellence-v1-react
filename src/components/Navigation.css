@@ -18,12 +18,13 @@
     width: 7%;
     position: absolute;
     bottom: 10%;
-    left: 21%;
+    /* left: 21%; */
   
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    transition: 0.25s ease-in-out;
     animation: bounce-move 0.5s linear;
 }
 
