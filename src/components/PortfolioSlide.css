@@ -35,9 +35,8 @@
 .computer-background-img {
     position: relative;
     width: 800px;    
-    height: 500px;           
-    background-image:
-        url("../assets/portfolio-slide/bg-computer.png");
+    height: 500px;
+    background-image: url("../assets/portfolio-slide/bg-computer.png");
     background-position: center;
     background-size: cover;
 }

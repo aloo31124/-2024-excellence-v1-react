@@ -146,7 +146,7 @@ a {
   .computer-background-img {
       width: 650px;    
       height: 400px;       
-      background-image:url("./images/portfolio-slide/bg-computer.png");
+      background-image: url("../assets/portfolio-slide/bg-computer.png");
   }
   .portfolio-slide-list {
       position: relative;
@@ -269,9 +269,7 @@ a {
   .computer-background-img {
       width: 350px;    
       height: 250px;    
-      /* 不同設備 長寬比不同, vh, vw 設定易破圖 */   
-      background-image:
-          url("./images/portfolio-slide/bg-computer-little.png");
+      background-image: url("../assets/portfolio-slide/bg-computer.png");
   }
   .portfolio-slide-list {
       position: relative;
