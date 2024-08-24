@@ -5,6 +5,7 @@ import WorkFlowSlide from './components/WorkFlowSlide.jsx';
 import './App.css';
 import ServiceList from './components/ServiceList.jsx';
 import PortfolioSlide from './components/PortfolioSlide.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
         <WorkFlowSlide/>
         <ServiceList/>
         <PortfolioSlide/>
-        {/* <PortfolioSlide/> */}
+        <Footer/>
       </>
   );
 }
