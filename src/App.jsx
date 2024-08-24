@@ -14,6 +14,7 @@ function App() {
         <HeaderAnimate/>
         <WorkFlowSlide/>
         <ServiceList/>
+        <PortfolioSlide/>
         {/* <PortfolioSlide/> */}
       </>
   );

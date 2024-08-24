@@ -14,23 +14,55 @@
 
 
 :root {
-  --primary-orange: #F1B41B;
-  --primary-orange-shadow: #d6a21d;
-  --primary-blue: #00407E;
-  --primary-white: #FFFFFF;
-  --primary-black: #000000;
-  --gray: #231F20;
-  --light-gray: #BFBEBB;
-  --light-orange: #FFFDFA;
+    --primary-orange: #F1B41B;
+    --primary-orange-shadow: #d6a21d;
+    --primary-blue: #00407E;
+    --primary-white: #FFFFFF;
+    --primary-black: #000000;
+    --gray: #231F20;
+    --light-gray: #BFBEBB;
+    --light-orange: #FFFDFA;
 
-  /* 優先等級: 最高, 如: 上方導覽列 */
-  --z-index-top1-nav: 999;
-  /* 優先等級: 次高, 如: 輪播點選bar, 畫面內點選按鈕 */
-  --z-index-top2-click: 900;
-  /* 優先等級: 中等, 初始 */
-  --z-index-top3-defalut: 500;
-  /* 優先等級: 底層, 如: 底圖 */
-  --z-index-top4-background: 1;
+    /* 優先等級: 最高, 如: 上方導覽列 */
+    --z-index-top1-nav: 999;
+    /* 優先等級: 次高, 如: 輪播點選bar, 畫面內點選按鈕 */
+    --z-index-top2-click: 900;
+    /* 優先等級: 中等, 初始 */
+    --z-index-top3-defalut: 500;
+    /* 優先等級: 底層, 如: 底圖 */
+    --z-index-top4-background: 1;
+
+    /* 網頁標頭 大標題, 移動標題 */
+    --h1-desktop-and-large: 7rem;
+    --h1-laptop-and-pad: 6rem;
+    --h1-mobile: 2.5rem;
+    /* 每個 區塊section 次標題h2: 報價流程, 服務項目, 作品集 */
+    --h2-desktop-and-large: 5rem;
+    --h2-laptop-and-pad: 4rem;
+    --h2-mobile: 2.5rem;
+    /* 每個 區塊section 第三標題 h3 */
+    --h3-desktop-and-large: 1.75rem;
+    --h3-laptop-and-pad: 1.5rem;
+    --h3-mobile: 1.25rem;
+    /* 合作流程 h3 客製設定 => h2 0.8倍縮小 */
+    --h3-flow-slide-desktop-and-large: calc(var(--h2-desktop-and-large)*0.5);
+    --h3-flow-slide-laptop-and-pad: calc(var(--h2-laptop-and-pad)*0.5);
+    --h3-flow-slide-mobile: calc(var(--h2-mobile)*0.5);
+    /* 內文 */
+    --p-desktop-and-large: 1.25rem;
+    --p-laptop-and-pad: 1.25rem;
+    --p-mobile: 0.8rem;
+    /* 網頁標頭 slogan */
+    --p-slogan-desktop-and-large: calc(var(--p-desktop-and-large)*1.2);
+    --p-slogan-laptop-and-pad: calc(var(--p-laptop-and-pad)*1.2);
+    --p-slogan-mobile: calc(var(--p-mobile)*1.2);
+    /* 作品集 輪播圖 tab p內文 客製設定,圓角比例 => 比一般p 縮小 0.8 */
+    --p-portfolio-tab-size-desktop-and-large: calc(var(--p-desktop-and-large)*0.8);
+    --p-portfolio-tab-height-desktop-and-large: calc(var(--p-desktop-and-large)*1.2); /* radius比例 */
+    --p-portfolio-tab-size-laptop-and-pad: calc(var(--p-laptop-and-pad)*0.8);
+    --p-portfolio-tab-height-laptop-and-pad: calc(var(--p-laptop-and-pad)*1.2); /* radius比例 */
+    --p-portfolio-tab-size-mobile: calc(var(--p-mobile)*0.8);
+    --p-portfolio-tab-height-mobile: calc(var(--p-mobile)*1.2); /* radius比例 */
 }
 
 
