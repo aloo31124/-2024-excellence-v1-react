@@ -41,7 +41,7 @@ function ServiceList() {
 
 
     return(
-        <section className={styles.serviceList}>
+        <section id="service-list" className={styles.serviceList}>
             <div className={styles.rightBlock}>
                 <h2 className={styles.serviceListTitle}>服務項目</h2>
             </div>
